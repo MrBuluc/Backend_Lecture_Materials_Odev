@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34003.232
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YetGen Jump & Akbank Backend Programı Eğitimi", "YetGen Jump & Akbank Backend Programı Eğitimi\YetGen Jump & Akbank Backend Programı Eğitimi.csproj", "{FFC2CAA2-77B2-47B0-812A-4F81EDC760A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YetGen Jump & Akbank Backend Programı Eğitimi", "YetGen Jump & Akbank Backend Programı Eğitimi\YetGen Jump & Akbank Backend Programı Eğitimi.csproj", "{FFC2CAA2-77B2-47B0-812A-4F81EDC760A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lecture_3", "Lecture_3", "{A3DA852F-2CA2-4208-84BB-339748791BD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Freelancer", "Freelancer\Freelancer.csproj", "{27BC24D3-93CF-404F-B0DB-71E76E6886DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +19,16 @@ Global
 		{FFC2CAA2-77B2-47B0-812A-4F81EDC760A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFC2CAA2-77B2-47B0-812A-4F81EDC760A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFC2CAA2-77B2-47B0-812A-4F81EDC760A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27BC24D3-93CF-404F-B0DB-71E76E6886DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27BC24D3-93CF-404F-B0DB-71E76E6886DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27BC24D3-93CF-404F-B0DB-71E76E6886DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27BC24D3-93CF-404F-B0DB-71E76E6886DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{27BC24D3-93CF-404F-B0DB-71E76E6886DF} = {A3DA852F-2CA2-4208-84BB-339748791BD1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {44A326E9-9DA3-4C17-9859-FB1DA5392A9F}

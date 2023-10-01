@@ -1,0 +1,119 @@
+[
+  {
+    "Id": "36e85a7f-faf3-4bf0-bdc5-2c5af4b0747f",
+    "CreatedOn": "25.09.2023 22:03:18 +03:00",
+    "FirstName": "Hakkican",
+    "LastName": "Buluc",
+    "WorkExperince": "Tahmin Et Yazilim Gelistirici",
+    "Reviews": [
+      {
+        "Id": 1,
+        "CreatedOn": "18.09.2023 14:55:22 +03:00",
+        "Text": "Hakkican's work on our web application at Rentco Mid was exemplary. He not only coded efficiently but also provided innovative solutions to complex problems. His dedication and passion for software development are truly commendable.",
+        "Rating": 5
+      },
+      {
+        "Id": 2,
+        "CreatedOn": "12.09.2023 17:21:35 +03:00",
+        "Text": "Watching Hakkican's content on YouTube, it's clear he knows his stuff. His tutorials and explanations are thorough, making complex topics accessible to beginners.",
+        "Rating": 4.5
+      },
+      {
+        "Id": 3,
+        "CreatedOn": "05.09.2023 10:09:10 +03:00",
+        "Text": "I had the pleasure of working with Hakkican at 'Tahmin Et'. He's a team player and always ready to lend a hand. His coding skills are top-notch, and he's always up to date with the latest technologies.",
+        "Rating": 5
+      },
+      {
+        "Id": 4,
+        "CreatedOn": "02.09.2023 13:30:55 +03:00",
+        "Text": "While Hakkican is undoubtedly talented, we faced some communication hurdles during our project. The end product was satisfactory, but the process could have been smoother.",
+        "Rating": 3.5
+      }
+    ]
+  },
+  {
+    "Id": "a1234567-b8c9-0def-1234-56789abcdef0",
+    "CreatedOn": "01.01.2023 10:00:00 +03:00",
+    "FirstName": "Maria",
+    "LastName": "Gonzalez",
+    "WorkExperince": "Web Designer at Creative Hub",
+    "Reviews": [
+      {
+        "Id": 5,
+        "CreatedOn": "05.01.2023 15:05:20 +03:00",
+        "Text": "Maria's design skills are phenomenal. She revamped our entire website, making it more user-friendly and visually stunning.",
+        "Rating": 5
+      }
+    ]
+  },
+  {
+    "Id": "b2345678-c9d0-1efa-2345-67890abcdef1",
+    "CreatedOn": "02.02.2023 12:20:00 +03:00",
+    "FirstName": "Suresh",
+    "LastName": "Patel",
+    "WorkExperince": "Full-stack Developer at TechSolutions",
+    "Reviews": [
+      {
+        "Id": 6,
+        "CreatedOn": "10.02.2023 13:25:45 +03:00",
+        "Text": "Suresh delivered our project on time and exceeded our expectations. His expertise in MERN stack is commendable.",
+        "Rating": 5
+      }
+    ]
+  },
+  {
+    "Id": "c3456789-d0e1-2fbc-3456-78901abcdef2",
+    "CreatedOn": "03.03.2023 14:40:00 +03:00",
+    "FirstName": "Elena",
+    "LastName": "Ivanova",
+    "WorkExperince": "SEO Specialist at OnlineBoosters",
+    "Reviews": [
+      {
+        "Id": 7,
+        "CreatedOn": "15.03.2023 16:50:30 +03:00",
+        "Text": "Elena significantly improved our website's search ranking. Her insights on content strategy were invaluable.",
+        "Rating": 4.5
+      }
+    ]
+  },
+  {
+    "Id": "41cf8de0-2cbb-4522-9178-2b1a6326d698",
+    "CreatedOn": "2.10.2023 00:21:11 +03:00",
+    "FirstName": "Console",
+    "LastName": "App",
+    "WorkExperince": "C#",
+    "Reviews": [
+    ]
+  },
+  {
+    "Id": "9e6b42eb-5a82-49f8-becc-caa986065ae1",
+    "CreatedOn": "2.10.2023 00:29:28 +03:00",
+    "FirstName": "Console",
+    "LastName": "App",
+    "WorkExperince": "C#",
+    "Reviews": [
+      {
+        "Id": 8,
+        "CreatedOn": "2.10.2023 00:29:28 +03:00",
+        "Text": "Console",
+        "Rating": 1
+      }
+    ]
+  },
+  {
+    "Id": "d93d9498-9e5f-4bfc-8ac9-300d3142d7e1",
+    "CreatedOn": "2.10.2023 00:30:42 +03:00",
+    "FirstName": "Console",
+    "LastName": "App",
+    "WorkExperince": "C#",
+    "Reviews": [
+      {
+        "Id": 8,
+        "CreatedOn": "2.10.2023 00:30:42 +03:00",
+        "Text": "Console",
+        "Rating": 1
+      }
+    ]
+  }
+]

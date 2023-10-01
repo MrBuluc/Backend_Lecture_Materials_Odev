@@ -2,6 +2,9 @@
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        List<int> ints = new();
+        ints.Add(1);
+        ints.Add(2);
+        ints.Add(3);
     }
 }
