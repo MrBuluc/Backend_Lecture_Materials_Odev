@@ -3,7 +3,7 @@ using Freelancer.Common;
 
 namespace Freelancer.Entities
 {
-    internal class Customer : Person<Guid>, ICSVConvertible, IJSONConvertible
+    public class Customer : Person<Guid>, ICSVConvertible, IJSONConvertible
     {
         public string PhoneNumber { get; set; }
 

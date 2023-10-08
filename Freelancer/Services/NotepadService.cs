@@ -5,7 +5,7 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Freelancer.Services
 {
-    internal class NotepadService
+    public class NotepadService
     {
         public void checkPath(string path)
         {
@@ -45,12 +45,22 @@ namespace Freelancer.Services
             File.WriteAllText($"{path}\\{typePlural}.json", JsonConvert.SerializeObject(list));
         }
 
-        public List<Dictionary<string, dynamic>>? GetJson(string jsonName)
+        public List<Dictionary<string, dynamic>>? GetJson(string jsonName, string truePath = "")
         {
-            string path = $"{FileLocations.ProjectFolder}\\Database";
-            checkPath(path);
+            string path;
+            if (!string.IsNullOrEmpty(jsonName))
+            {
+                path = $"{FileLocations.ProjectFolder}\\Database";
+                checkPath(path);
 
-            using StreamReader reader = new($"{path}\\{jsonName}.json");
+                path = $"{path}\\{jsonName}.json";
+            }
+            else
+            {
+                path = truePath;
+            }
+
+            using StreamReader reader = new(path);
             return JsonConvert.DeserializeObject<List<Dictionary<string, dynamic>>>(reader.ReadToEnd());
         }
     }

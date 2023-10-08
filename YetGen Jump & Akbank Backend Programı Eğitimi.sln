@@ -7,7 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YetGen Jump & Akbank Backen
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lecture_3", "Lecture_3", "{A3DA852F-2CA2-4208-84BB-339748791BD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Freelancer", "Freelancer\Freelancer.csproj", "{27BC24D3-93CF-404F-B0DB-71E76E6886DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Freelancer", "Freelancer\Freelancer.csproj", "{27BC24D3-93CF-404F-B0DB-71E76E6886DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week_3_4", "Week_3_4\Week_3_4.csproj", "{BE101833-CE59-4798-A5A7-B3730B1A0ACD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{27BC24D3-93CF-404F-B0DB-71E76E6886DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27BC24D3-93CF-404F-B0DB-71E76E6886DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27BC24D3-93CF-404F-B0DB-71E76E6886DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE101833-CE59-4798-A5A7-B3730B1A0ACD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE101833-CE59-4798-A5A7-B3730B1A0ACD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE101833-CE59-4798-A5A7-B3730B1A0ACD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE101833-CE59-4798-A5A7-B3730B1A0ACD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

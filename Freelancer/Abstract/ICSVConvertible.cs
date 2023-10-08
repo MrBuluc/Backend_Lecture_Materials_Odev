@@ -1,6 +1,6 @@
 ﻿namespace Freelancer.Abstract
 {
-    internal interface ICSVConvertible
+    public interface ICSVConvertible
     {
         string GetValuesCSV();
         void SetValuesCSV(string csv);

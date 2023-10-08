@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace Freelancer.Entities
 {
-    internal class Freelancer : Person<Guid>, ICSVConvertible, IJSONConvertible
+    public class Freelancer : Person<Guid>, ICSVConvertible, IJSONConvertible
     {
         public Freelancer() : base(Guid.Empty, DateTimeOffset.Now, "", "")
         {
@@ -59,6 +59,18 @@ namespace Freelancer.Entities
             json["WorkExperince"] = WorkExperince;
             json["Reviews"] = Reviews.ConvertAll<Dictionary<string, dynamic>>(review => review.ToJSON());
             return json;
+        }
+
+        public double GetAverageRating()
+        {
+            double sum = 0;
+
+            foreach (Review review in Reviews)
+            {
+                sum += review.Rating;
+            }
+
+            return sum / Reviews.Count;
         }
 
         public override string? ToString() => $"Freelancer(Id: {Id}, CreatedOn: {CreatedOn}, FirstName: {FirstName}, LastName: {LastName}, WorkExperince: {WorkExperince}, Reviews: {Reviews})";

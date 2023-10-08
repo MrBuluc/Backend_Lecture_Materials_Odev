@@ -3,7 +3,7 @@ using Freelancer.Common;
 
 namespace Freelancer.Entities
 {
-    internal class Review : EntityBase<int>, IJSONConvertible
+    public class Review : EntityBase<int>, IJSONConvertible
     {
         public string Text { get; set; }
         public int Rating { get; set; }
