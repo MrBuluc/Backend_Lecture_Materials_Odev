@@ -1,0 +1,5 @@
+Text file imported. - 28.09.2023 21:35
+Lines are splitted. - 28.09.2023 21:35
+All lines are converted to objects. - 28.09.2023 21:35
+The JSON file was successfully created. - 28.09.2023 21:35
+The Operation was successfully completed. - 28.09.2023 21:35
