@@ -1,4 +1,6 @@
-﻿namespace Productify.Domain.Entities
+﻿using Productify.Domain.Extensions;
+
+namespace Productify.Domain.Entities
 {
     public class Product
     {
@@ -10,7 +12,7 @@
         {
             Id = Guid.NewGuid();
             Name = name;
-            CreateOn = DateTime.Now;
+            CreateOn = DateTime.Now.SetKindUtc();
         }
     }
 }

@@ -9,7 +9,7 @@ namespace Productify.Persistence.Contexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseInMemoryDatabase("ProductifyDb");
+            optionsBuilder.UseNpgsql(Configuration.ConnectionString);
         }
     }
 }
