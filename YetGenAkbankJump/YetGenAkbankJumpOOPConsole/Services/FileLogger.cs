@@ -3,7 +3,7 @@
     public class FileLogger : LoggerBase
     {
         private readonly string _filePath;
-        protected internal override string? Name => "Mr. Bülüç";
+        protected internal override string? Name { get; set; } = "Mr. Bülüç";
         public FileLogger(string filePath)
         {
             _filePath = filePath;
@@ -32,8 +32,8 @@
 
         protected internal override void LogFatal(string message)
         {
-            base.LogFatal(message);
             File.AppendAllText(_filePath, $"Fatal => {message} - {DateTime.Now:g}");
+            base.LogFatal(message);
         }
 
         protected internal override void LogFail(string message)
