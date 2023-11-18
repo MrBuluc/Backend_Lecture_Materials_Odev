@@ -4,6 +4,7 @@
     {
         public static string WelcomeMessage => "WelcomeMessage";
         public static string WelcomeMessageBlazor => "WelcomeMessageBlazor";
+        public static string IdCannotBeNull = "IdCannotBeNull";
 
         public static class Menu
         {

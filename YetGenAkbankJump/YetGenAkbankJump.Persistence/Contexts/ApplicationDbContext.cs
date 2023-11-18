@@ -8,6 +8,7 @@ namespace YetGenAkbankJump.Persistence.Contexts
     {
         public DbSet<Category> Categories {  get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<Student> Students { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> dbContextOptions) : base(dbContextOptions) { }
 
