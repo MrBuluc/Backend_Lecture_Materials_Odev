@@ -11,18 +11,24 @@ namespace YetGenAkbankJump.MVCClient.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IOpenAIService _openAiService;
+        //private readonly IOpenAIService _openAiService;
 
-        public HomeController(ILogger<HomeController> logger, IOpenAIService openAIService)
+        public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            _openAiService = openAIService;
+            //_openAiService = openAIService;
         }
 
-        public IActionResult Index()
+        /*public IActionResult Index()
         {
 
             return View(new HomeIndexViewModel());
+        }*/
+
+        [HttpGet]
+        public async Task<IActionResult> Index()
+        {
+            return View();
         }
 
         [HttpPost]
@@ -47,7 +53,7 @@ namespace YetGenAkbankJump.MVCClient.Controllers
                 Console.WriteLine(imageResult.Error.Message);
             }*/
 
-            var completionResult = await _openAiService.ChatCompletion.CreateCompletion(new ChatCompletionCreateRequest
+            /*var completionResult = await _openAiService.ChatCompletion.CreateCompletion(new ChatCompletionCreateRequest
             {
                 Messages = new List<ChatMessage>
     {
@@ -59,10 +65,11 @@ namespace YetGenAkbankJump.MVCClient.Controllers
             if (completionResult.Successful)
             {
                 viewModel.ChatGPTResponse = completionResult.Choices.First().Message.Content;
-            } else
+            }
+            else
             {
                 viewModel.ChatGPTResponse = completionResult.Error.Messages.ToString();
-            }
+            }*/
 
             return View(viewModel);
         }

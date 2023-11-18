@@ -1,12 +1,18 @@
 using Microsoft.Extensions.DependencyInjection;
 using OpenAI.Extensions;
+using YetGenAkbankJump.MVCClient.Services;
+using YetGenAkbankJump.Shared.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddOpenAIService(settings => { settings.ApiKey = "OpenAIAPIKey"; });
+//builder.Services.AddOpenAIService(settings => { settings.ApiKey = "OpenAIAPIKey"; });
+
+builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri("https://localhost:7030/api/") });
+
+builder.Services.AddSingleton<ITextService, MvcTextsService>();
 
 var app = builder.Build();
 

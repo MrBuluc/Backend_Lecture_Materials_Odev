@@ -10,7 +10,7 @@ namespace YetGenAkbankJump.MVCClient.Controllers
 
         public PasswordsController()
         {
-            passwordGenerator = new PasswordGenerator();
+            //passwordGenerator = new PasswordGenerator();
         }
 
         [HttpGet]
@@ -26,9 +26,26 @@ namespace YetGenAkbankJump.MVCClient.Controllers
         [HttpPost]
         public IActionResult Index(PasswordsIndexViewModel model)
         {
-            model.Password = passwordGenerator.Generate(model.PasswordLength, model.IncludeNumbers, true, true, true);
+            //model.Password = passwordGenerator.Generate(model.PasswordLength, model.IncludeNumbers, true, true, true);
 
-            return View(model);
+            //return View(model);
+
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult Add()
+        {
+            return View(new PasswordsIndexViewModel()
+            {
+                Password = passwordGenerator.Generate(15, true, true, true, true)
+            });
+        }
+
+        [HttpPost]
+        public IActionResult Add(PasswordsIndexViewModel passwordModel)
+        {
+            return View();
         }
     }
 }
