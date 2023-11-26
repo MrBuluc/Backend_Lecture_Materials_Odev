@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 using YetGenAkbankJump.Domain.Entities;
+using YetGenAkbankJump.Domain.Identity;
 
 namespace YetGenAkbankJump.Persistence.Contexts
 {
@@ -15,6 +16,10 @@ namespace YetGenAkbankJump.Persistence.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+            modelBuilder.Ignore<User>();
+            modelBuilder.Ignore<Role>();
+            modelBuilder.Ignore<UserSetting>();
             
             base.OnModelCreating(modelBuilder);
         }
