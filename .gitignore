@@ -362,3 +362,4 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /Productify/Presentation/Productify.MVC/appsettings.json
+/YetGenAkbankJump/YetGenAkbankJump.WebApi/Services/passwords.txt
