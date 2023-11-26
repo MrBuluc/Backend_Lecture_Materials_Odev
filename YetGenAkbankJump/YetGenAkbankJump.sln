@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YetGenAkbankJump.WebApi", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YetGenAkbankJump.BlazorClient", "YetGenAkbankJump.BlazorClient\YetGenAkbankJump.BlazorClient.csproj", "{1C463DF8-1B4F-4179-8EEF-9A86A7362F1D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YetGenAkbankJump.Domain", "YetGenAkbankJump.Domain\YetGenAkbankJump.Domain.csproj", "{386B76D0-FC8E-4C42-A10C-3F097EEF4915}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YetGenAkbankJump.Domain", "YetGenAkbankJump.Domain\YetGenAkbankJump.Domain.csproj", "{386B76D0-FC8E-4C42-A10C-3F097EEF4915}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YetGenAkbankJump.Persistence", "YetGenAkbankJump.Persistence\YetGenAkbankJump.Persistence.csproj", "{8B03BC4E-596B-4907-906C-BF9649A6760F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YetGenAkbankJump.Persistence", "YetGenAkbankJump.Persistence\YetGenAkbankJump.Persistence.csproj", "{8B03BC4E-596B-4907-906C-BF9649A6760F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YetGenAkbankJump.IdentityMVC", "YetGenAkbankJump.IdentityMVC\YetGenAkbankJump.IdentityMVC.csproj", "{D44A890D-82F8-4462-9C2E-5FC3052AC5F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{8B03BC4E-596B-4907-906C-BF9649A6760F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B03BC4E-596B-4907-906C-BF9649A6760F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B03BC4E-596B-4907-906C-BF9649A6760F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D44A890D-82F8-4462-9C2E-5FC3052AC5F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D44A890D-82F8-4462-9C2E-5FC3052AC5F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D44A890D-82F8-4462-9C2E-5FC3052AC5F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D44A890D-82F8-4462-9C2E-5FC3052AC5F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
