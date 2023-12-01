@@ -1,12 +1,23 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Resend;
 using YetGenAkbankJump.Domain.Identity;
+using YetGenAkbankJump.IdentityMVC.Services;
 using YetGenAkbankJump.Persistence.Contexts;
+using YetGenAkbankJump.Shared.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews().AddNToastNotifyToastr();
+
+builder.Services.AddOptions();
+builder.Services.AddHttpClient<ResendClient>();
+builder.Services.Configure<ResendClientOptions>(options =>
+{
+    options.ApiToken = "";
+});
+builder.Services.AddTransient<IResend, ResendClient>();
 
 string connectionString = builder.Configuration.GetSection("YetgenPostgreSQLDB").Value;
 
@@ -33,7 +44,7 @@ builder.Services.AddIdentity<User, Role>(options =>
 
     options.User.AllowedUserNameCharacters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@$";
     options.User.RequireUniqueEmail = true;
-}).AddEntityFrameworkStores<YetgenIdentityContext>();
+}).AddEntityFrameworkStores<YetgenIdentityContext>().AddTokenProvider<DataProtectorTokenProvider<User>>(TokenOptions.DefaultProvider);
 
 builder.Services.Configure<SecurityStampValidatorOptions>(options =>
 {
@@ -56,6 +67,7 @@ builder.Services.ConfigureApplicationCookie(options =>
     options.AccessDeniedPath = new PathString("/Auth/AccessDenied");
 });
 
+builder.Services.AddSingleton<IEmailService, EmailService>();
 
 var app = builder.Build();
 

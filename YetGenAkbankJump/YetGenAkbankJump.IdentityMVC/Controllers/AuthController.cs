@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using NToastNotify;
+using System.Web;
 using YetGenAkbankJump.Domain.Identity;
 using YetGenAkbankJump.IdentityMVC.ViewModels;
 
@@ -39,8 +40,7 @@ namespace YetGenAkbankJump.IdentityMVC.Controllers
             }
 
             Guid userId = Guid.NewGuid();
-
-            IdentityResult identityResult = await _userManager.CreateAsync(new User()
+            User user = new()
             {
                 Id = userId,
                 Email = registerViewModel.Email,
@@ -51,7 +51,9 @@ namespace YetGenAkbankJump.IdentityMVC.Controllers
                 UserName = registerViewModel.Username,
                 CreatedOn = DateTimeOffset.UtcNow,
                 CreatedByUserId = userId.ToString(),
-            }, registerViewModel.Password);
+            };
+
+            IdentityResult identityResult = await _userManager.CreateAsync(user, registerViewModel.Password);
 
             if (!identityResult.Succeeded)
             {
@@ -64,9 +66,42 @@ namespace YetGenAkbankJump.IdentityMVC.Controllers
                 return View(registerViewModel);
             }
 
+            Console.WriteLine($"Verify Link: https://localhost:7046/Auth/VerifyEmail?email={user.Email}&token={HttpUtility.UrlEncode(await _userManager.GenerateEmailConfirmationTokenAsync(user))}");
+
             _toastNotification.AddSuccessToastMessage("You've successfully registered to the application.");
 
-            return View(registerViewModel);
+            return RedirectToAction(nameof(Login));
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> VerifyEmailAsync(string email, string token)
+        {
+            User? user = await _userManager.FindByEmailAsync(email);
+
+            if (user is not null)
+            {
+                IdentityResult identityResult = await _userManager.ConfirmEmailAsync(user, token);
+
+                if (identityResult.Succeeded)
+                {
+                    _toastNotification.AddSuccessToastMessage("You've successsfully verified your email.");
+
+                    return View();
+                }
+
+                foreach (IdentityError error in identityResult.Errors)
+                {
+                    ModelState.AddModelError(error.Code, error.Description);
+                }
+
+                _toastNotification.AddErrorToastMessage("We unfortunately couldn't verify your email.");
+
+                return RedirectToAction(nameof(Login));
+            }
+
+            _toastNotification.AddErrorToastMessage("We unfortunately couldn't find your email.");
+
+            return RedirectToAction(nameof(Login));
         }
 
         [HttpGet]
